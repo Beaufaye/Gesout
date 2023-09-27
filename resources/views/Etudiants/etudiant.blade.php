@@ -3,7 +3,7 @@
 <main id="main" class="main">
 
   <div class="pagetitle col-lg-8">
-    <a href="{{route('ajout_etudiant')}}"><button type="button" class="btn btn-danger">AJOUTER</button></a>
+    <a href=""><button type="button" class="btn btn-danger">AJOUTER</button></a>
     <h1 class="text-center">LISTES DES ETUDIANTS</h1>
   </div><!-- End Page Title -->
 
@@ -57,4 +57,4 @@
 <br>
 <br>
 
-@include('layouts.footer')
+@include('resources.footer')

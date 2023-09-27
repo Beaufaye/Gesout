@@ -32,6 +32,12 @@
         </a>
       </li><!-- End Register Page Nav -->
 
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{route('enseignant.index')}}">
+          <i class="bi bi-person-bounding-box text-danger"></i>
+          <span class="text-dark">GESTION DES ENSEIGNANTS</span>
+        </a>
+      </li><!-- End Register Page Nav -->
 
     </ul>
 

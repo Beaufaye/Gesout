@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\EtudiantController;
-
+use App\Http\Controllers\EnseignantController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -23,3 +23,5 @@ Route::get('/dashboard', function () {
 });
 
 Route::resource('etudiant', EtudiantController::class);
+
+Route::resource('enseignant', EnseignantController::class);
