@@ -18,7 +18,6 @@
              <th>Nom</th>
              <th>Prenom</th>
              <th>Sexe</th>
-             <th>Filière</th>
              <th>Contact</th>
          </tr>
         </thead>
@@ -27,7 +26,6 @@
          
         <tr>
             <th></th>
-            <td></td>
             <td></td>
             <td></td>
             <td></td>

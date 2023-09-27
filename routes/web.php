@@ -25,3 +25,5 @@ Route::get('/dashboard', function () {
 Route::resource('etudiant', EtudiantController::class);
 
 Route::resource('enseignant', EnseignantController::class);
+
+Route::resource('soutenance', SoutenanceController::class);
