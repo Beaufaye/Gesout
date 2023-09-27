@@ -5,46 +5,33 @@
 
       <li class="nav-item">
         <a class="nav-link " >
-          <i class="bi bi-grid"></i>
-          <span>ACCEUIL</span>
+          <i class="bi bi-grid text-danger"></i>
+          <span class="text-dark">ACCEUIL</span>
         </a>
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" >
-          <i class="bi bi-people"></i>
-          <span>GESTION DES ETUDIANTS</span>
+        <a class="nav-link collapsed" href="{{'etudiant'}}">
+          <i class="bi bi-person text-danger"></i>
+          <span class="text-dark">GESTION DES ETUDIANTS</span>
         </a>
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item">
         <a class="nav-link collapsed" >
-          <i class="bi bi-scissors"></i>
-          <span>MODELES</span>
+          <i class="bi bi-mortarboard-fill text-danger"></i>
+          <span class="text-dark">GESTION DES SOUTENANCES</span>
         </a>
       </li><!-- End F.A.Q Page Nav -->
 
 
       <li class="nav-item">
         <a class="nav-link collapsed" >
-          <i class="bi bi-card-list"></i>
-          <span>COUTURE</span>
+          <i class="bi bi-person-bounding-box text-danger"></i>
+          <span class="text-dark">GESTION DES DM</span>
         </a>
       </li><!-- End Register Page Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" >
-          <i class="bi bi-currency-exchange"></i>
-          <span>PAIEMENT</span>
-        </a>
-      </li><!-- End Login Page Nav -->
-
-      <li class="nav-item">
-        <a class="nav-link collapsed" >
-          <i class="bi bi-currency-exchange"></i>
-          <span>DEPENSE</span>
-        </a>
-      </li><!-- End Login Page Nav -->
 
     </ul>
 

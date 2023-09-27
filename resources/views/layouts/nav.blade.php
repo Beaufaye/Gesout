@@ -11,14 +11,14 @@
       </li><!-- End Dashboard Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{route('clients')}}">
+        <a class="nav-link collapsed" href="{{route('etudiant.index')}}">
           <i class="bi bi-people"></i>
-          <span>CLIENTS</span>
+          <span>GESTION ETUDIANT</span>
         </a>
       </li><!-- End Profile Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{route('modeles')}}">
+        <a class="nav-link collapsed">
           <i class="bi bi-scissors"></i>
           <span>MODELES</span>
         </a>
@@ -26,28 +26,28 @@
 
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{route('couture')}}">
+        <a class="nav-link collapsed" >
           <i class="bi bi-card-list"></i>
           <span>COUTURE</span>
         </a>
       </li><!-- End Register Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{route('paiement')}}">
+        <a class="nav-link collapsed" >
           <i class="bi bi-currency-exchange"></i>
           <span>PAIEMENT</span>
         </a>
       </li><!-- End Login Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{route('depensel')}}">
+        <a class="nav-link collapsed" >
           <i class="bi bi-currency-exchange"></i>
           <span>DEPENSE</span>
         </a>
       </li><!-- End Login Page Nav -->
 
       <li class="nav-item">
-        <a class="nav-link collapsed" href="{{route('personnels')}}">
+        <a class="nav-link collapsed" >
           <i class="bi bi-person"></i>
           <span>PERSONNELS</span>
         </a>
