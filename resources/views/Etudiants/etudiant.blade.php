@@ -3,7 +3,7 @@
 <main id="main" class="main">
 
   <div class="pagetitle col-lg-8">
-    <a href=""><button type="button" class="btn btn-danger">AJOUTER</button></a>
+    <a href="{{route('etudiant.create')}}"><button type="button" class="btn btn-danger">AJOUTER</button></a>
     <h1 class="text-center">LISTES DES ETUDIANTS</h1>
   </div><!-- End Page Title -->
 
@@ -20,6 +20,7 @@
              <th>Sexe</th>
              <th>Filière</th>
              <th>Contact</th>
+             <th>Mod/Sup</th>
          </tr>
         </thead>
 

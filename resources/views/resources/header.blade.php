@@ -41,3 +41,4 @@
     </nav><!-- End Icons Navigation -->
 
   </header><!-- End Header -->
+  @include('resources.js')

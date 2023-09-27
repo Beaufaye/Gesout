@@ -21,7 +21,7 @@ class etudiantController extends Controller
      */
     public function create()
     {
-        //
+        return view('Etudiants.ajout_etudiant');
     }
 
     /**
