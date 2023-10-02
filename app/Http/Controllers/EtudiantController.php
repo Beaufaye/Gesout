@@ -29,7 +29,16 @@ class etudiantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+
+        $etudiant = new Etudiant();
+        $etudiant->nom = $request->nom;
+        $etudiant->prenom = $request->prenom;
+        $etudiant->sexe = $request->sexe;
+        $etudiant->filiere = $request->filiere;
+        $etudiant->contact = $request->contact;
+        $etudiant->save();
+
+        return redirect()->route('etudiant.create')->with('status', 'Etudiant a bien été ajouté.');
     }
 
     /**

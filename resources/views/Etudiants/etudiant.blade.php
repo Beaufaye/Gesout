@@ -35,7 +35,7 @@
             <td>{{ $etudiant->contact}}</td>
             
             <td>
-                <a href="" class="btn btn-dark">Modifier</a>
+                <a href="/update-etudiant/{{{{ $etudiant->id}}''}}" class="btn btn-dark">Modifier</a>
                 <a href="" class="btn btn-danger">Supprimer</a>
             </td>
         </tr>

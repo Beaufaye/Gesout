@@ -15,7 +15,7 @@
     @endif
     
     <div class="row">
-      <form action="" method="POST" class="form-group">
+      <form action="{{route('etudiant.store')}}" method="POST" class="form-group">
         @csrf
         
         <div class="mb-3 row">
@@ -53,7 +53,7 @@
               </div>
           </div>
           <button type="submit" class="btn btn-danger">ENREGISTRER</button>
-          <a href=""><button type="button" class="btn btn-dark">VOIR LA LISTE DES ETUDIANTS</button></a>
+          <a href="{{route('etudiant.index')}}"><button type="button" class="btn btn-dark">VOIR LA LISTE DES ETUDIANTS</button></a>
       </form>
 
 

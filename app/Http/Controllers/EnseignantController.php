@@ -22,7 +22,7 @@ class EnseignantController extends Controller
      */
     public function create()
     {
-        //
+        return view('Enseignants.ajout_enseignant');
     }
 
     /**
@@ -30,7 +30,14 @@ class EnseignantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $enseignant = new Enseignant();
+        $enseignant->nom = $request->nom;
+        $enseignant->prenom = $request->prenom;
+        $enseignant->sexe = $request->sexe;
+        $enseignant->contact = $request->contact;
+        $enseignant->save();
+
+        return redirect()->route('enseignant.create')->with('status', 'Enseignant a bien été ajouté.');
     }
 
     /**
