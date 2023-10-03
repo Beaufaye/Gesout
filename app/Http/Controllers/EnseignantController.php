@@ -53,22 +53,37 @@ class EnseignantController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $enseignant = Enseignant::find($id);
+        return view('Enseignants.edite', compact('enseignant'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        //
+
+        $enseignant = Enseignant::find($id);
+        
+        $enseignant->update([
+            'nom' => $request->nom,
+            'prenom' => $request->prenom,
+            'sexe' => $request->sexe,
+            'contact' => $request->contact,
+        ]);
+   
+     
+        return redirect()->route('enseignant.index')->with('status', 'Enseignant a été modifié avec succès.');
     }
+
 
     /**
      * Remove the specified resource from storage.
      */
     public function destroy(string $id)
     {
-        //
+        $enseignant = Enseignant::find($id);
+        $enseignant->delete();
+        return redirect()->route('enseignant.index')->with('status', 'Enseignant a été supprimé avec succès.');
     }
 }

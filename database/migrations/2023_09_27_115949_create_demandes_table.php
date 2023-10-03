@@ -13,6 +13,8 @@ return new class extends Migration
     {
         Schema::create('demandes', function (Blueprint $table) {
             $table->id();
+            $table->string('nom_etudiant');
+            $table->string('periode');
             $table->string('statut');
             $table->timestamps();
         });

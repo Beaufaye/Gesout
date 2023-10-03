@@ -33,8 +33,8 @@
             <td>{{ $enseignant->contact}} </td>
             
             <td>
-                <a href="" class="btn btn-dark">Modifier</a>
-                <a href="" class="btn btn-danger">Supprimer</a>
+                <a href="{{route('enseignant.edit', $enseignant->id )}}" class="btn btn-dark">Modifier</a>
+                <a href="{{url('supprim-enseignant/' .$enseignant->id)}}" class="btn btn-danger">Supprimer</a>
             </td>
         </tr>
         @endforeach

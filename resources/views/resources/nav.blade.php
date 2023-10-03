@@ -17,14 +17,7 @@
         </a>
       </li><!-- End Profile Page Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" >
-          <i class="bi bi-mortarboard-fill text-danger"></i>
-          <span class="text-dark">GESTION DES SOUTENANCES</span>
-        </a>
-      </li><!-- End F.A.Q Page Nav -->
-
-
+     
       <li class="nav-item">
         <a class="nav-link collapsed" >
           <i class="bi bi-person-bounding-box text-danger"></i>
@@ -38,6 +31,20 @@
           <span class="text-dark">GESTION DES ENSEIGNANTS</span>
         </a>
       </li><!-- End Register Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" >
+          <i class="bi bi-mortarboard-fill text-danger"></i>
+          <span class="text-dark">GESTION DES SOUTENANCES</span>
+        </a>
+      </li><!-- End F.A.Q Page Nav -->
+
+      <li class="nav-item">
+        <a class="nav-link collapsed" href="{{route('demande.index')}}" >
+          <i class="bi bi-mortarboard-fill text-danger"></i>
+          <span class="text-dark">GESTION DES DEMANDES DE SOUTENANCE</span>
+        </a>
+      </li><!-- End F.A.Q Page Nav -->
 
     </ul>
 

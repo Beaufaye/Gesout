@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('juries', function (Blueprint $table) {
             $table->id();
+            $table->string('president_jury');
+            $table->string('nom_dm');
+            $table->string('nom_ms');
+            $table->string('nom_etudiant');
+            $table->string('nom_salle');
+            $table->string('date_soutenance');
             $table->timestamps();
         });
     }

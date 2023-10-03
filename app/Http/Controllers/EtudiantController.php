@@ -54,15 +54,28 @@ class etudiantController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $etudiant = Etudiant::find($id);
+        return view('Etudiants.edit', compact('etudiant'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, $id)
     {
-        //
+
+        $etudiant = Etudiant::find($id);
+        
+        $etudiant->update([
+            'nom' => $request->nom,
+            'prenom' => $request->prenom,
+            'sexe' => $request->sexe,
+            'filiere' => $request->filiere,
+            'contact' => $request->contact,
+        ]);
+   
+     
+        return redirect()->route('etudiant.index')->with('status', 'Etudiant a été modifié avec succès.');
     }
 
     /**
@@ -70,6 +83,8 @@ class etudiantController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $etudiant = Etudiant::find($id);
+        $etudiant->delete();
+        return redirect()->route('etudiant.index')->with('status', 'Etudiant a été supprimé avec succès.');
     }
 }

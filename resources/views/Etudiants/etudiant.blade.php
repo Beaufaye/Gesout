@@ -11,7 +11,11 @@
     <div class="row">
       <table class="table table-striped table-bordered zero-configuration">
         <h2 class="text-center"></h2>
-
+        @if (session('status'))
+        <div class="alert alert-success">
+            {{session('status')}}
+        </div>
+    @endif
         <thead>
          <tr>
              <th>ID</th>
@@ -35,8 +39,8 @@
             <td>{{ $etudiant->contact}}</td>
             
             <td>
-                <a href="/update-etudiant/{{{{ $etudiant->id}}''}}" class="btn btn-dark">Modifier</a>
-                <a href="" class="btn btn-danger">Supprimer</a>
+                <a href="{{route('etudiant.edit', $etudiant->id )}}" class="btn btn-dark">Modifier</a>
+                <a href="{{url('supprim-etudiant/' .$etudiant->id)}}" class="btn btn-danger">Supprimer</a>
             </td>
         </tr>
         @endforeach
