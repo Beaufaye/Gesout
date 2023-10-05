@@ -31,11 +31,11 @@
             <td>{{ $demande->statut}} </td>
             
             <td>
-                @can('edit', $post)
-                <a href="{{route('demande.edit', $demande->id )}}" class="btn btn-dark">Modifier</a>
-                @endcan
                
-                @can('delete', $post)
+                <a href="{{route('demande.edit', $demande->id )}}" class="btn btn-dark">Modifier</a>
+                
+               
+                @can('delete')
                 <a href="{{url('supprim-demande/' .$demande->id)}}" class="btn btn-danger">Supprimer</a>
                 @endcan
             </td>

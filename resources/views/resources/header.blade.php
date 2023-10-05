@@ -17,11 +17,12 @@
 
         <li class="nav-item dropdown pe-3">
 
-          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-           
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" >
             <span class="d-none d-md-block  ps-2">{{Auth::user()->name}}</span>
             <img src="assets/img/vert.jpeg" style="width: 15px" alt="" class="rounded-circle" >
-            <br>
+           
+          </a><!-- End Profile Iamge Icon -->
+          <a class="nav-link nav-profile d-flex align-items-center pe-0" href="{{route('logout')}}">
             <span>Se déconnecter</span>
           </a><!-- End Profile Iamge Icon -->
         </li><!-- End Profile Nav -->

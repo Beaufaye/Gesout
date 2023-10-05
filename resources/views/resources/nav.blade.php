@@ -61,6 +61,7 @@
         </a>
       </li><!-- End F.A.Q Page Nav -->
 
+      
       <li class="nav-item">
         <a class="nav-link collapsed" href="{{route('soutenance.index')}}" >
           <i class="bi bi-mortarboard-fill text-danger"></i>

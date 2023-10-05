@@ -6,7 +6,7 @@ namespace App\Providers;
 
 use App\Models\Demandes;
 use App\Models\User;
-use App\Policies\PermissionPolicy;
+use App\Policies\DemandePolicy;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
@@ -19,7 +19,7 @@ class AuthServiceProvider extends ServiceProvider
      */
     protected $policies = [
         'App\Model' => 'App\Policies\ModelPolicy',
-        Demandes::class => PermissionPolicy::class
+        Demandes::class => DemandePolicy::class
     ];
 
     /**
@@ -28,7 +28,7 @@ class AuthServiceProvider extends ServiceProvider
     public function boot(): void
     {
         Gate::define('edit', function(User $user){
-            return $user->isAdministrateur();
+            return $user->isAdmin();
         });
     }
 }

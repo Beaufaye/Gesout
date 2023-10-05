@@ -2,27 +2,25 @@
 
 namespace App\Policies;
 
-use Illuminate\Auth\Access\HandlesAuthorization;
+
 use App\Models\Demandes;
 use App\Models\User;
+use Illuminate\Auth\Access\HandlesAuthorization;
 
-class PermissionPolicy
+class DemandePolicy
 {
 
     use HandlesAuthorization;
 
     public function before(User $user, $ability){
-        if($user->isAdministrateur()){
+        if($user->idAdmin()){
             return true;
         }
     }
     /**
      * Determine whether the user can view any models.
      */
-    public function viewAny(User $user)
-    {
-        //
-    }
+   
 
     /**
      * Determine whether the user can view the model.
@@ -37,7 +35,7 @@ class PermissionPolicy
      */
     public function create(User $user)
     {
-        return $user->id === 1;
+        return true;
     }
 
     /**
@@ -45,15 +43,15 @@ class PermissionPolicy
      */
     public function update(User $user, Demandes $demandes)
     {
-        return $user->id === 1;
-        
+        return $user->id = $demandes->user_id;
     }
+
     /**
      * Determine whether the user can delete the model.
      */
     public function delete(User $user, Demandes $demandes)
     {
-        return $user->id === 3;
+        return $user->id = $demandes->user_id;
     }
 
     /**

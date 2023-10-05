@@ -14,19 +14,19 @@ class UserSeeder extends Seeder
        $admin_id = DB::table('users')->insert([
             'name' => 'Beaufaye',
             'password' => Hash::make('benben'),
-            'roles_id' => 3,
+            'role' => 'admin',
         ]);
 
        $secr_id = DB::table('users')->insert([
             'name' => 'Ulrich',
             'password' => Hash::make('ulrich'),
-            'roles_id' => 1,
+            'role' => 'secretaire',
         ]);
 
-        DB::table('users')->insert([
+        $agent_id = DB::table('users')->insert([
             'name' => 'Kennedy',
             'password' => Hash::make('kennedy'),
-            'roles_id' => 2,
+            'role' => 'agent',
         ]);
     }
 }

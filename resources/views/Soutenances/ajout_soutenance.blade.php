@@ -53,7 +53,7 @@
           <div class="mb-3 row">
             <label for="telephone" class="col-sm-2 col-form-label">Salle</label>
             <div class="col-sm-10">
-                <select name="salle" class="form-select" required>
+                <select name="id_salle" class="form-select" required>
                     <option>Choisissez la salle</option>
                     @foreach ($salle as $sal)
                     <option value="{{ $sal->nom }}">{{ $sal->nom }}</option>

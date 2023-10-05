@@ -39,7 +39,7 @@ class SoutenanceController extends Controller
         $sout->etudiant = $request->etudiant;
         $sout->date = $request->date;
         $sout->jury = $request->jury;
-        $sout->salle = $request->salle;
+        $sout->id_salle = $request->id_salle;
         $sout->save();
 
         return redirect()->route('soutenance.create')->with('status', 'La soutenance a bien été programmé.');
@@ -61,7 +61,7 @@ class SoutenanceController extends Controller
         $sout = Soutenance::find($id);
         $etudiant = Etudiant::all();
         $jury = Jury::all();
-        $salle = Salles::all();
+        $id_salle = Salles::all();
         return view('Soutenances.editsout', compact('sout', 'etudiant', 'jury', 'salle'));
     }
 
@@ -76,7 +76,7 @@ class SoutenanceController extends Controller
             'etudiant' => $request->etudiant,
             'date' => $request->date,
             'jury' => $request->jury,
-            'salle' => $request->salle,
+            'id_salle' => $request->salle,
         ]);
    
      

@@ -54,9 +54,9 @@ class DemandeController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit(string $id, Demandes $demandes)
     {
-        $this->authorize('edit');
+        
         $demande = Demandes::find($id);
         $etudiant = Etudiant::all();
         return view('Demande.editd', compact('demande', 'etudiant'));
@@ -65,7 +65,7 @@ class DemandeController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, string $id, Demandes $demandes)
     {
         $demande = Demandes::find($id);
         
@@ -82,7 +82,7 @@ class DemandeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(string $id, Demandes $demandes)
     {
         $demande = Demandes::find($id);
         $demande->delete();
