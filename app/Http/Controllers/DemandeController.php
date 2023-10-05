@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Demandes;
 use App\Models\Etudiant;
 
+
 class DemandeController extends Controller
 {
     /**
@@ -14,6 +15,7 @@ class DemandeController extends Controller
      */
     public function index()
     {
+        
         $demande = Demandes::all();
         return view('Demande.demande', compact('demande'));
     }
@@ -24,7 +26,7 @@ class DemandeController extends Controller
     public function create()
     {
         $etudiant = Etudiant::all();
-        return view('Demande.ajout_demande');
+        return view('Demande.ajout_demande', compact('etudiant'));
     }
 
     /**
@@ -54,8 +56,10 @@ class DemandeController extends Controller
      */
     public function edit(string $id)
     {
+        $this->authorize('edit');
         $demande = Demandes::find($id);
-        return view('Demandes.editd', compact('demande'));
+        $etudiant = Etudiant::all();
+        return view('Demande.editd', compact('demande', 'etudiant'));
     }
 
     /**

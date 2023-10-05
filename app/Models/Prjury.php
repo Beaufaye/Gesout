@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Prjury extends Model
 {
     use HasFactory;
+    protected $guarded =[
+
+    ];
 }

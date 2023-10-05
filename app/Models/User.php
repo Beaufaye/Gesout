@@ -19,8 +19,9 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
-        'role',
         'password',
+        'roles_id',
+        
     ];
 
     /**
@@ -42,4 +43,8 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function isAdministrateur(){
+        return $this->roles === 'Administrateur';
+    }
 }

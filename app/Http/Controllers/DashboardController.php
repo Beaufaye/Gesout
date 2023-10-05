@@ -4,16 +4,15 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Salles;
-class SallesController extends Controller
+
+class DashboardController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $salle = Salles::all();
-        return view('Salle.salle', compact('salle'));
+        //
     }
 
     /**
@@ -21,7 +20,7 @@ class SallesController extends Controller
      */
     public function create()
     {
-        return view('Salle.ajout_salle');
+        //
     }
 
     /**
@@ -29,11 +28,7 @@ class SallesController extends Controller
      */
     public function store(Request $request)
     {
-        $salle = new Salles();
-        $salle->nom = $request->nom;
-        $salle->save();
-
-        return redirect()->route('salle.create')->with('status', 'La salle a bien été ajouté.');
+        //
     }
 
     /**

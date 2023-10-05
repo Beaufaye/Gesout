@@ -32,28 +32,24 @@
                     <img src="assets/img/logo.jpg" class="rounded-circle ml-6" style="width: 90px">
                   </div>
 
-                  <form method="POST" action="" novalidate >
-
+                  @foreach ($errors->all() as $error)
+                      {{ $error}}
+                  @endforeach
+                  <form method="POST" action="{{route('authenticate')}}">
+                    @csrf
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">Nom d'Utilisateur</label>
                       <div class="input-group has-validation">
-                        <input type="text" name="username" class="form-control" id="yourUsername" required>
-                        <div class="invalid-feedback">Veuillez entrer votre nom d'utilisateur</div>
+                        <input type="text" name="name" class="form-control"  required>
                       </div>
                     </div>
 
                     <div class="col-12">
                       <label for="yourPassword" class="form-label">Mot de Passe</label>
-                      <input type="password" name="password" class="form-control" id="yourPassword" required>
-                      <div class="invalid-feedback">Veuillez entrer votre Mot de Passe</div>
+                      <input type="password" name="password" class="form-control" required>
                     </div>
 
-                    <div class="col-12">
-                      <div class="form-check">
-                        <input class="form-check-input" type="checkbox" name="remember" value="true" id="rememberMe">
-                        <label class="form-check-label" for="rememberMe">Se souvenir de moi</label>
-                      </div>
-                    </div>
+                    
                     <div class="col-12">
                       <button class="btn btn-primary w-100" type="submit">Connexion</button>
                     </div>

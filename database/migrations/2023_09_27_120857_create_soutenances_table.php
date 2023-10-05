@@ -14,14 +14,11 @@ return new class extends Migration
         Schema::create('soutenances', function (Blueprint $table) {
             $table->id();
             $table->date('date');
-            $table->unsignedBigInteger('juries_id')->unsigned();
-            $table->foreign('juries_id')->references('id')->on('juries')->onDelete('cascade')->onUpdate('cascade');
-            $table->unsignedBigInteger('salles_id')->unsigned();
-            $table->foreign('salles_id')->references('id')->on('salles')->onDelete('cascade')->onUpdate('cascade');
-            $table->unsignedBigInteger('demandes_id')->unsigned();
-            $table->foreign('demandes_id')->references('id')->on('demandes')->onDelete('cascade')->onUpdate('cascade');
-            $table->unsignedBigInteger('users_id')->unsigned();
-            $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+
+            $table->unsignedBigInteger('id_etudiant')->unsigned();
+            $table->foreign('id_etudiant')->references('id')->on('etudiants')->onDelete('cascade')->onUpdate('cascade');
+            $table->unsignedBigInteger('id_salle')->unsigned();
+            $table->foreign('id_salle')->references('id')->on('salles')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }

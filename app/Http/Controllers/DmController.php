@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Models\Dm;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
@@ -12,7 +12,8 @@ class DmController extends Controller
      */
     public function index()
     {
-        //
+        $dm = Dm::all();
+        return view('Dm.dm', compact('dm'));
     }
 
     /**
@@ -20,7 +21,7 @@ class DmController extends Controller
      */
     public function create()
     {
-        //
+        return view('Dm.ajout_dm');
     }
 
     /**
@@ -28,7 +29,14 @@ class DmController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $dm = new Dm();
+        $dm->nom = $request->nom;
+        $dm->prenom = $request->prenom;
+        $dm->sexe = $request->sexe;
+        $dm->contact = $request->contact;
+        $dm->save();
+
+        return redirect()->route('dm.create')->with('status', 'Le DM a bien été ajouté.');
     }
 
     /**
@@ -44,7 +52,8 @@ class DmController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $dm = Dm::find($id);
+        return view('Dm.editdm', compact('dm'));
     }
 
     /**
@@ -52,7 +61,17 @@ class DmController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $dm = Dm::find($id);
+        
+        $dm->update([
+            'nom' => $request->nom,
+            'prenom' => $request->prenom,
+            'sexe' => $request->sexe,
+            'contact' => $request->contact,
+        ]);
+   
+     
+        return redirect()->route('dm.index')->with('status', 'La Directeur de Mémoire a été modifié avec succès.');
     }
 
     /**
@@ -60,6 +79,8 @@ class DmController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $dm = Dm::find($id);
+        $dm->delete();
+        return redirect()->route('dm.index')->with('status', 'Le Directeur de Mémoire a été supprimé avec succès.');
     }
 }

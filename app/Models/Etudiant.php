@@ -9,11 +9,14 @@ class Etudiant extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'nom',
-        'prenom',
-        'sexe',
-        'filiere',
-        'contact',
+    protected $guarded =[
+
     ];
+    function Enseignant (){
+        return $this->hasOne(Enseignant::class);
+    }
+    
+    function Demande (){
+        return $this->hasOne(Demande::class);
+    }
 }

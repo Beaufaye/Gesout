@@ -9,4 +9,7 @@ class Dm extends Model
 {
     use HasFactory;
     
+    protected $guarded =[
+
+    ];
 }

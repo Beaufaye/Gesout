@@ -9,10 +9,13 @@ class Enseignant extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'nom',
-        'prenom',
-        'sexe',
-        'contact',
+    protected $guarded =[
+
     ];
+    function Enseignant (){
+        return $this->hasOne(Enseignant::class);
+    }
+    function Etudiant (){
+        return $this->hasOne(Etudiant::class);
+    }
 }
