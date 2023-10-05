@@ -57,8 +57,10 @@ class JuryController extends Controller
      */
     public function edit(string $id)
     {
-        $jury = Jury::all();
-        return view('Jury.editj', compact('jury'));
+        $jury = Jury::find($id);
+        $dm = Dm::all();
+        $ms = Maitrestage::all();
+        return view('Jury.editj', compact('jury', 'dm', 'ms'));
     }
 
     /**

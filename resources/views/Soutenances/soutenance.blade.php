@@ -30,7 +30,7 @@
             <td>{{ $sout->etudiant}} </td>
             <td>{{ $sout->date}} </td>
             <td>{{ $sout->jury}} </td>
-            <td>{{ $sout->salle}} </td>
+            <td>{{ $sout->id_salle}} </td>
             
             <td>
                 <a href="{{route('soutenance.edit', $sout->id )}}" class="btn btn-dark">Modifier</a>

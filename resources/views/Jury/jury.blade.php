@@ -32,7 +32,7 @@
             
             <td>
                 <a href="{{route('jury.edit', $jury->id )}}" class="btn btn-dark">Modifier</a>
-                <a href="{{url('supprim-sout/' .$jury->id)}}" class="btn btn-danger">Supprimer</a>
+                <a href="{{url('supprim-jury/' .$jury->id)}}" class="btn btn-danger">Supprimer</a>
             </td>
         </tr>
         @endforeach
